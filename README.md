@@ -64,8 +64,3 @@ Then open `http://localhost:8000` in your browser.
 - **Email**: [christenmendis07@gmail.com](mailto:christenmendis07@gmail.com)
 - **Location**: Bengaluru, Karnataka, India
 
----
-
-## 📄 License
-
-MIT License

@@ -1,0 +1,606 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Portfolio of Christen Mendis, a computer science student interested in software development, programming, and building practical projects.">
+  <meta name="theme-color" content="#0a0d14">
+
+  <!-- Page Title -->
+  <title>Christen Mendis | Software Developer Portfolio</title>
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="css/styles.css">
+
+  <!-- Inter Font (System fallback included in CSS) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- ========================================================================
+       HEADER & NAVIGATION
+       ======================================================================== -->
+  <header class="header" id="header">
+    <div class="container nav-wrapper">
+      <!-- Logo / Initials -->
+      <a href="#hero" class="nav-logo" aria-label="Home">
+        <span class="nav-logo-badge">CM</span>
+        <span class="nav-logo-text">Christen Mendis</span>
+      </a>
+
+      <!-- Desktop & Mobile Navigation Links -->
+      <nav aria-label="Main Navigation">
+        <ul class="nav-links" id="nav-links">
+          <li><a href="#about" class="nav-link">About</a></li>
+          <li><a href="#projects" class="nav-link">Projects</a></li>
+          <li><a href="#skills" class="nav-link">Skills</a></li>
+          <li><a href="#contact" class="nav-link">Contact</a></li>
+        </ul>
+      </nav>
+
+      <!-- Theme Switcher & Mobile Menu Toggle -->
+      <div class="nav-actions">
+        <!-- Light / Dark Mode Toggle Button -->
+        <button id="theme-toggle-btn" class="theme-toggle-btn" type="button" aria-label="Switch to light mode" title="Switch to light mode">
+          <!-- Moon Icon (Dark Mode) -->
+          <svg class="moon-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+          </svg>
+          <!-- Sun Icon (Light Mode) -->
+          <svg class="sun-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="5"></circle>
+            <line x1="12" y1="1" x2="12" y2="3"></line>
+            <line x1="12" y1="21" x2="12" y2="23"></line>
+            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+            <line x1="1" y1="12" x2="3" y2="12"></line>
+            <line x1="21" y1="12" x2="23" y2="12"></line>
+            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+          </svg>
+        </button>
+
+        <!-- Mobile Hamburger Toggle -->
+        <button class="mobile-toggle-btn" id="mobile-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- ========================================================================
+         HERO SECTION
+         ======================================================================== -->
+    <section class="hero-section" id="hero">
+      <!-- Interactive Dynamic Particle Canvas -->
+      <canvas id="hero-canvas"></canvas>
+      <div class="hero-glow"></div>
+
+      <div class="container hero-content">
+        <!-- Status Indicator Pill -->
+        <div class="hero-status-pill reveal">
+          <span class="status-dot"></span>
+          <span>Computer Science Student &amp; Aspiring Developer</span>
+        </div>
+
+        <!-- Name Heading -->
+        <h1 class="hero-title reveal delay-1">
+          Hi, I'm <span class="gradient-text">Christen Mendis</span>.
+        </h1>
+
+        <!-- Subtitle & Role -->
+        <p class="hero-role reveal delay-2">
+          Computer Science Student &amp; Aspiring Software Developer
+        </p>
+
+        <!-- Description -->
+        <p class="hero-description reveal delay-2">
+          I'm a computer science student who enjoys building software, learning new technologies, and turning ideas into practical projects. I'm currently developing my skills across programming, web development, databases, and software engineering.
+        </p>
+
+        <!-- Call to Action Buttons -->
+        <div class="hero-actions reveal delay-3">
+          <a href="#projects" class="btn btn-primary">
+            <span>Explore Projects</span>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <line x1="5" y1="12" x2="19" y2="12"></line>
+              <polyline points="12 5 19 12 12 19"></polyline>
+            </svg>
+          </a>
+          <a href="#contact" class="btn btn-secondary">
+            <span>Get in Touch</span>
+          </a>
+        </div>
+
+        <!-- Social Links in Hero -->
+        <div class="hero-socials reveal delay-4">
+          <!-- GitHub -->
+          <a href="https://github.com/christenmendis07-blip" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="GitHub Profile">
+            <svg viewBox="0 0 24 24">
+              <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/>
+            </svg>
+          </a>
+          <!-- LinkedIn -->
+          <a href="https://www.linkedin.com/in/christen-mendis-097586441/" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="LinkedIn Profile">
+            <svg viewBox="0 0 24 24">
+              <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+            </svg>
+          </a>
+          <!-- Email -->
+          <a href="mailto:christenmendis07@gmail.com" class="social-link" aria-label="Send Email">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+              <polyline points="22,6 12,13 2,6"></polyline>
+            </svg>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================================================
+         ABOUT ME SECTION
+         ======================================================================== -->
+    <section class="section" id="about">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-tag">About Me</span>
+          <h2 class="section-title">Learning by Building</h2>
+          <p class="section-subtitle">Computer science student exploring software development, systems, and practical projects.</p>
+        </div>
+
+        <div class="about-grid">
+          <!-- Photo / Avatar Placeholder with Glowing Accent Frame -->
+          <div class="about-image-wrapper reveal">
+            <div class="about-image-backdrop"></div>
+            <div class="about-image-card">
+              <!-- Geometric Avatar Illustration Placeholder -->
+              <svg class="about-avatar-svg" viewBox="0 0 320 380" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect width="320" height="380" fill="url(#avatar-bg-gradient)"/>
+                <circle cx="160" cy="140" r="64" fill="url(#avatar-head-gradient)"/>
+                <ellipse cx="160" cy="290" rx="96" ry="60" fill="url(#avatar-body-gradient)"/>
+                <circle cx="138" cy="130" r="7" fill="#ffffff" opacity="0.9"/>
+                <circle cx="182" cy="130" r="7" fill="#ffffff" opacity="0.9"/>
+                <path d="M148 162C154 168 166 168 172 162" stroke="#ffffff" stroke-width="3" stroke-linecap="round" opacity="0.8"/>
+                <defs>
+                  <linearGradient id="avatar-bg-gradient" x1="0" y1="0" x2="320" y2="380" gradientUnits="userSpaceOnUse">
+                    <stop stop-color="#1e1b4b"/>
+                    <stop offset="0.5" stop-color="#312e81"/>
+                    <stop offset="1" stop-color="#0f172a"/>
+                  </linearGradient>
+                  <linearGradient id="avatar-head-gradient" x1="96" y1="76" x2="224" y2="204" gradientUnits="userSpaceOnUse">
+                    <stop stop-color="#818cf8"/>
+                    <stop offset="1" stop-color="#6366f1"/>
+                  </linearGradient>
+                  <linearGradient id="avatar-body-gradient" x1="64" y1="230" x2="256" y2="350" gradientUnits="userSpaceOnUse">
+                    <stop stop-color="#6366f1"/>
+                    <stop offset="1" stop-color="#4338ca"/>
+                  </linearGradient>
+                </defs>
+              </svg>
+            </div>
+            <!-- Floating Learning Badge -->
+            <div class="about-experience-badge">
+              <div class="badge-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <polyline points="16 18 22 12 16 6"></polyline>
+                  <polyline points="8 6 2 12 8 18"></polyline>
+                </svg>
+              </div>
+              <span class="badge-text">Building &amp;<br>Learning</span>
+            </div>
+          </div>
+
+          <!-- Bio Paragraph, Education & Highlights -->
+          <div class="about-content reveal delay-1">
+            <p class="about-text">
+              I'm a computer science student with an interest in software development and technology. I enjoy learning by building projects and exploring how different technologies work together.
+            </p>
+            <p class="about-text">
+              I'm currently developing my skills in programming, web development, databases, and software engineering. My goal is to keep improving, build useful projects, and gain experience through real-world development.
+            </p>
+
+            <!-- Simple Education Entry -->
+            <div class="about-education">
+              <div class="education-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M22 10v6M2 10l10-5 10 5-10 5z"></path>
+                  <path d="M6 12v5c3 3 9 3 12 0v-5"></path>
+                </svg>
+              </div>
+              <div class="education-info">
+                <div class="education-degree">B.Tech &mdash; Computer Science</div>
+                <div class="education-meta">
+                  <span class="education-school">REVA University</span>
+                  <span class="education-badge">2025 &ndash; 2029</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Quick Highlight Cards -->
+            <div class="about-highlights">
+              <div class="highlight-item">
+                <div class="highlight-title">Focus Area</div>
+                <div class="highlight-value">Software Development</div>
+              </div>
+              <div class="highlight-item">
+                <div class="highlight-title">Location</div>
+                <div class="highlight-value">Bengaluru, Karnataka, India</div>
+              </div>
+              <div class="highlight-item">
+                <div class="highlight-title">Status</div>
+                <div class="highlight-value">CS Student</div>
+              </div>
+              <div class="highlight-item">
+                <div class="highlight-title">Approach</div>
+                <div class="highlight-value">Practical Building</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================================================
+         PROJECTS SECTION
+         ======================================================================== -->
+    <section class="section" id="projects">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-tag">Featured Work</span>
+          <h2 class="section-title">Selected Projects</h2>
+          <p class="section-subtitle">A collection of genuine software projects and applications I have built.</p>
+        </div>
+
+        <div class="projects-grid">
+          <!-- PROJECT 1: Ascend -->
+          <article class="project-card reveal">
+            <div class="project-preview">
+              <span class="project-badge">Flutter &amp; Mobile</span>
+              <svg class="project-preview-mockup" viewBox="0 0 480 260" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect width="480" height="260" fill="#0b0f19"/>
+                <!-- Phone Frame Center Mockup -->
+                <rect x="150" y="16" width="180" height="234" rx="20" fill="#111827" stroke="#374151" stroke-width="2"/>
+                <!-- Phone Speaker / Dynamic Island -->
+                <rect x="210" y="24" width="60" height="6" rx="3" fill="#1f2937"/>
+                <!-- Header / Streak Card -->
+                <rect x="165" y="42" width="150" height="36" rx="8" fill="#1f2937"/>
+                <circle cx="182" cy="60" r="10" fill="#f59e0b" fill-opacity="0.2"/>
+                <circle cx="182" cy="60" r="5" fill="#f59e0b"/>
+                <rect x="198" y="52" width="60" height="6" rx="2" fill="#e5e7eb"/>
+                <rect x="198" y="62" width="40" height="5" rx="2" fill="#9ca3af"/>
+                <!-- Focus Timer Circle -->
+                <circle cx="240" cy="120" r="34" stroke="#374151" stroke-width="5" fill="#1f2937"/>
+                <circle cx="240" cy="120" r="34" stroke="#6366f1" stroke-width="5" stroke-dasharray="213" stroke-dashoffset="65" stroke-linecap="round" fill="none"/>
+                <!-- Timer text -->
+                <rect x="224" y="112" width="32" height="8" rx="2" fill="#ffffff"/>
+                <rect x="230" y="123" width="20" height="4" rx="1.5" fill="#818cf8"/>
+                <!-- Action button -->
+                <rect x="205" y="164" width="70" height="18" rx="9" fill="#6366f1"/>
+                <!-- Task items -->
+                <rect x="165" y="192" width="150" height="18" rx="5" fill="#1f2937"/>
+                <circle cx="177" cy="201" r="4" fill="#10b981"/>
+                <rect x="187" y="198" width="80" height="5" rx="2" fill="#cbd5e1"/>
+                <rect x="165" y="216" width="150" height="18" rx="5" fill="#1f2937"/>
+                <circle cx="177" cy="225" r="4" fill="#6366f1"/>
+                <rect x="187" y="222" width="65" height="5" rx="2" fill="#94a3b8"/>
+              </svg>
+            </div>
+            <div class="project-content">
+              <h3 class="project-title">Ascend</h3>
+              <p class="project-desc">
+                A productivity and digital-discipline platform designed to help students improve focus, manage tasks, build streaks, and develop better digital habits.
+              </p>
+              <div class="project-tags">
+                <span class="tag">Flutter</span>
+                <span class="tag">Dart</span>
+                <span class="tag">Local Notifications</span>
+                <span class="tag">Mobile UI</span>
+              </div>
+              <div class="project-links">
+                <a href="https://github.com/christenmendis07-blip/Ascend" target="_blank" rel="noopener noreferrer" class="project-link-item">
+                  <span>GitHub Repo</span>
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- PROJECT 2: 2D Graphics Editor -->
+          <article class="project-card reveal delay-1">
+            <div class="project-preview">
+              <span class="project-badge">C &amp; Algorithms</span>
+              <svg class="project-preview-mockup" viewBox="0 0 480 260" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect width="480" height="260" fill="#0b0f19"/>
+                <!-- Terminal window container -->
+                <rect x="30" y="18" width="420" height="224" rx="10" fill="#0f172a" stroke="#1e293b" stroke-width="2"/>
+                <!-- Window titlebar -->
+                <rect x="30" y="18" width="420" height="28" rx="10" fill="#1e293b"/>
+                <circle cx="48" cy="32" r="4" fill="#ef4444"/>
+                <circle cx="62" cy="32" r="4" fill="#f59e0b"/>
+                <circle cx="76" cy="32" r="4" fill="#10b981"/>
+                <text x="240" y="36" fill="#94a3b8" font-size="10" font-family="monospace" text-anchor="middle">terminal - graphics_editor.c (gcc)</text>
+                <!-- ASCII Canvas Canvas Border -->
+                <rect x="46" y="56" width="220" height="170" rx="4" fill="#020617" stroke="#334155" stroke-width="1"/>
+                <text x="56" y="74" fill="#6366f1" font-size="9" font-family="monospace">[ 30 x 60 ASCII CANVAS ]</text>
+                <!-- Shapes -->
+                <text x="64" y="94" fill="#38bdf8" font-size="8" font-family="monospace">*****************</text>
+                <text x="64" y="106" fill="#38bdf8" font-size="8" font-family="monospace">*               *</text>
+                <text x="64" y="118" fill="#38bdf8" font-size="8" font-family="monospace">*****************</text>
+                <!-- Circle & Line -->
+                <text x="140" y="140" fill="#10b981" font-size="8" font-family="monospace">    ***    </text>
+                <text x="140" y="152" fill="#10b981" font-size="8" font-family="monospace">  *     *  </text>
+                <text x="140" y="164" fill="#10b981" font-size="8" font-family="monospace"> *   +   * </text>
+                <text x="140" y="176" fill="#10b981" font-size="8" font-family="monospace">  *     *  </text>
+                <text x="140" y="188" fill="#10b981" font-size="8" font-family="monospace">    ***    </text>
+                <text x="56" y="212" fill="#64748b" font-size="8" font-family="monospace">&gt; plot(x, y) buffer ready</text>
+                <!-- Right Menu Console Output -->
+                <rect x="276" y="56" width="160" height="170" rx="4" fill="#020617" stroke="#334155" stroke-width="1"/>
+                <text x="286" y="74" fill="#a855f7" font-size="9" font-family="monospace">=== EDITOR MENU ===</text>
+                <text x="286" y="92" fill="#94a3b8" font-size="8" font-family="monospace">1. Draw Line</text>
+                <text x="286" y="108" fill="#94a3b8" font-size="8" font-family="monospace">2. Draw Rectangle</text>
+                <text x="286" y="124" fill="#94a3b8" font-size="8" font-family="monospace">3. Draw Triangle</text>
+                <text x="286" y="140" fill="#94a3b8" font-size="8" font-family="monospace">4. Draw Circle</text>
+                <text x="286" y="156" fill="#94a3b8" font-size="8" font-family="monospace">5. Display Picture</text>
+                <text x="286" y="172" fill="#94a3b8" font-size="8" font-family="monospace">6. Clear Canvas</text>
+                <text x="286" y="200" fill="#10b981" font-size="8" font-family="monospace">Choice &gt; 4 [r=12]</text>
+                <rect x="374" y="192" width="5" height="10" fill="#10b981"/>
+              </svg>
+            </div>
+            <div class="project-content">
+              <h3 class="project-title">Graphics Editor</h3>
+              <p class="project-desc">
+                A menu-driven, terminal-based graphics editor in C that renders geometric shapes like lines, rectangles, triangles, and circles onto an ASCII canvas using Bresenham's line algorithm.
+              </p>
+              <div class="project-tags">
+                <span class="tag">C</span>
+                <span class="tag">Algorithms</span>
+                <span class="tag">Terminal UI</span>
+                <span class="tag">GCC</span>
+              </div>
+              <div class="project-links">
+                <a href="https://github.com/christenmendis07-blip/Graphics-editor" target="_blank" rel="noopener noreferrer" class="project-link-item">
+                  <span>GitHub Repo</span>
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================================================
+         SKILLS SECTION
+         ======================================================================== -->
+    <section class="section" id="skills">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-tag">Capabilities</span>
+          <h2 class="section-title">Technical Skills</h2>
+          <p class="section-subtitle">Programming languages, tools, and technologies I work with as a computer science student.</p>
+        </div>
+
+        <div class="skills-container">
+          <!-- SKILL CATEGORY 1: Programming -->
+          <div class="skill-category-card reveal">
+            <div class="category-header">
+              <div class="category-icon-box">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <polyline points="16 18 22 12 16 6"></polyline>
+                  <polyline points="8 6 2 12 8 18"></polyline>
+                </svg>
+              </div>
+              <h3 class="category-title">Programming</h3>
+            </div>
+            <div class="skill-items-grid">
+              <span class="skill-pill">C</span>
+              <span class="skill-pill">Java</span>
+              <span class="skill-pill">Python</span>
+              <span class="skill-pill">Dart</span>
+            </div>
+          </div>
+
+          <!-- SKILL CATEGORY 2: Web -->
+          <div class="skill-category-card reveal delay-1">
+            <div class="category-header">
+              <div class="category-icon-box">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <circle cx="12" cy="12" r="10"></circle>
+                  <line x1="2" y1="12" x2="22" y2="12"></line>
+                  <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
+                </svg>
+              </div>
+              <h3 class="category-title">Web</h3>
+            </div>
+            <div class="skill-items-grid">
+              <span class="skill-pill">HTML</span>
+              <span class="skill-pill">CSS</span>
+              <span class="skill-pill">JavaScript</span>
+            </div>
+          </div>
+
+          <!-- SKILL CATEGORY 3: Databases -->
+          <div class="skill-category-card reveal delay-2">
+            <div class="category-header">
+              <div class="category-icon-box">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <ellipse cx="12" cy="5" rx="9" ry="3"></ellipse>
+                  <path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"></path>
+                  <path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"></path>
+                </svg>
+              </div>
+              <h3 class="category-title">Databases</h3>
+            </div>
+            <div class="skill-items-grid">
+              <span class="skill-pill">MySQL</span>
+              <span class="skill-pill">SQLite</span>
+            </div>
+          </div>
+
+          <!-- SKILL CATEGORY 4: Tools -->
+          <div class="skill-category-card reveal delay-3">
+            <div class="category-header">
+              <div class="category-icon-box">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"></path>
+                </svg>
+              </div>
+              <h3 class="category-title">Tools</h3>
+            </div>
+            <div class="skill-items-grid">
+              <span class="skill-pill">Git</span>
+              <span class="skill-pill">GitHub</span>
+              <span class="skill-pill">VS Code</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================================================
+         CONTACT SECTION
+         ======================================================================== -->
+    <section class="section" id="contact">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-tag">Let's Connect</span>
+          <h2 class="section-title">Get In Touch</h2>
+          <p class="section-subtitle">Have an idea, project, or opportunity? Feel free to reach out.</p>
+        </div>
+
+        <div class="contact-grid">
+          <!-- Left Column: Direct Contact Details & Links -->
+          <div class="contact-info-card reveal">
+            <h3 class="contact-info-title">Contact Details</h3>
+            <p class="contact-info-desc">
+              Have an idea, project, or opportunity? Feel free to reach out across any of these channels:
+            </p>
+
+            <div class="contact-channels">
+              <!-- Email (with Click to Copy feedback) -->
+              <a href="mailto:christenmendis07@gmail.com" class="contact-channel-item" id="copy-email-btn" data-email="christenmendis07@gmail.com" title="Click to copy email">
+                <div class="channel-icon">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                    <polyline points="22,6 12,13 2,6"></polyline>
+                  </svg>
+                </div>
+                <div class="channel-details">
+                  <span class="channel-label">Email Address <span class="copy-feedback" style="margin-left: 6px; color: var(--accent-primary); font-size: 0.72rem; text-transform: none;">(Click to copy)</span></span>
+                  <span class="channel-value">christenmendis07@gmail.com</span>
+                </div>
+              </a>
+
+              <!-- LinkedIn -->
+              <a href="https://www.linkedin.com/in/christen-mendis-097586441/" target="_blank" rel="noopener noreferrer" class="contact-channel-item">
+                <div class="channel-icon">
+                  <svg viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+                  </svg>
+                </div>
+                <div class="channel-details">
+                  <span class="channel-label">LinkedIn</span>
+                  <span class="channel-value">linkedin.com/in/christen-mendis</span>
+                </div>
+              </a>
+
+              <!-- GitHub -->
+              <a href="https://github.com/christenmendis07-blip" target="_blank" rel="noopener noreferrer" class="contact-channel-item">
+                <div class="channel-icon">
+                  <svg viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/>
+                  </svg>
+                </div>
+                <div class="channel-details">
+                  <span class="channel-label">GitHub</span>
+                  <span class="channel-value">github.com/christenmendis07-blip</span>
+                </div>
+              </a>
+
+              <!-- Location -->
+              <div class="contact-channel-item">
+                <div class="channel-icon">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                    <circle cx="12" cy="10" r="3"></circle>
+                  </svg>
+                </div>
+                <div class="channel-details">
+                  <span class="channel-label">Location</span>
+                  <span class="channel-value">Bengaluru, Karnataka, India</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right Column: Front-End Contact Form -->
+          <div class="contact-form-wrapper reveal delay-1">
+            <form id="contact-form" class="contact-form" novalidate>
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="form-name" class="form-label">Your Name *</label>
+                  <input type="text" id="form-name" name="name" class="form-control" placeholder="Your Name" required>
+                </div>
+                <div class="form-group">
+                  <label for="form-email" class="form-label">Your Email *</label>
+                  <input type="email" id="form-email" name="email" class="form-control" placeholder="your.name@email.com" required>
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="form-subject" class="form-label">Subject</label>
+                <input type="text" id="form-subject" name="subject" class="form-control" placeholder="Project Inquiry / Hello">
+              </div>
+
+              <div class="form-group">
+                <label for="form-message" class="form-label">Message *</label>
+                <textarea id="form-message" name="message" class="form-control" placeholder="Tell me about your project or inquiry..." required></textarea>
+              </div>
+
+              <button type="submit" id="submit-btn" class="btn btn-primary" style="align-self: flex-start;">
+                <span>Send Message</span>
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <line x1="22" y1="2" x2="11" y2="13"></line>
+                  <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+                </svg>
+              </button>
+
+              <!-- Live Submission Feedback Container -->
+              <div id="form-status" class="form-status-message" role="alert"></div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ========================================================================
+       FOOTER
+       ======================================================================== -->
+  <footer class="footer">
+    <div class="container footer-content">
+      <div class="footer-text">
+        &copy; <span id="current-year">2026</span> Christen Mendis
+      </div>
+      <a href="#hero" class="footer-back-to-top">
+        <span>Back to Top</span>
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <polyline points="18 15 12 9 6 15"></polyline>
+        </svg>
+      </a>
+    </div>
+  </footer>
+
+  <!-- Main JavaScript File -->
+  <script src="js/main.js"></script>
+</body>
+</html>
